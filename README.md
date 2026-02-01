@@ -1,78 +1,156 @@
-<<<<<<< HEAD
-# Welcome to your Lovable project
+Career Compass AI
 
-## Project info
+Career Compass AI is an AI-powered career guidance platform designed to help students discover suitable career paths based on their skills, interests, and assessments, while providing administrators with real-time analytics and management tools.
+The platform is built using Flask, React, and MySQL with a clear separation of student and admin roles.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Key Features
 
-## How can I edit this code?
+Student Features
+Secure login and registration
+Skill-based career assessment
+AI-generated career recommendations
+Career readiness dashboard
+Learning roadmaps and action plans
+Resume analysis and ratings (extensible)
+Job matching and opportunities (extensible)
 
-There are several ways of editing your application.
+Admin Features
+Secure admin-only dashboard
+Dynamic analytics fetched from MySQL
+Total students, assessments, resumes, and job matches
+Career distribution charts
+View all students dynamically
+CSV-based bulk student data support
+Role-based access control
+AI Logic (Current Phase)
+Rule-based AI engine for career recommendations
+Confidence score calculation
+Designed to be extended with machine learning or LLM models
+Tech Stack
 
-**Use Lovable**
+Frontend
+React with TypeScript
+Vite
+Tailwind CSS
+shadcn/ui
+Recharts for analytics
+Framer Motion for animations
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Backend
+Flask
+Flask-CORS
+MySQL
+REST APIs
+Role-based access control
+Database
+MySQL
+Normalized relational schema
+Project Structure
+careercompass-ai
 
-Changes made via Lovable will be committed automatically to this repo.
+backend
 
-**Use your preferred IDE**
+app.py
+config.py
+models
+routes
+services
+utils
+db
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+src
+components
+pages
+admin
+student
+hooks
+lib
+main.tsx
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+public
+package.json
+tailwind.config.ts
+README.md
+.gitignore
 
-Follow these steps:
+How to Run Locally
+Clone the repository
+git clone https://github.com/BhavyThakar/careercompass-ai.git
+cd careercompass-ai
+Backend setup
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+cd backend
+pip install -r requirements.txt
+python app.py
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Backend runs on http://localhost:5000
 
-# Step 3: Install the necessary dependencies.
-npm i
+Frontend setup
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+Frontend runs on http://localhost:5173
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Authentication and Roles
 
-**Use GitHub Codespaces**
+Student users can access only student pages
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Admin users can access only admin pages
 
-## What technologies are used for this project?
+Backend enforces role-based access control
 
-This project is built with:
+Unauthorized access returns 403 Forbidden
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Admin Analytics
 
-## How can I deploy this project?
+Admin dashboard fetches real-time data from MySQL including:
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Total students
 
-## Can I connect a custom domain to my Lovable project?
+Total assessments
 
-Yes, you can!
+Resume uploads
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Job matches
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
-=======
-# careercompass-ai
-Career Compass AI – An AI-powered career guidance platform with admin dashboard and student analytics using Flask, React, and MySQL.
->>>>>>> f790db00e9c9ae367b558b31620e5cc4260717bc
+Career distribution charts
+
+CSV Support
+
+Supports bulk student data using CSV
+
+CSV data is used for admin views and analytics
+
+Designed for scalability
+
+Security
+
+Password hashing
+
+Role-based API protection
+
+node_modules excluded via .gitignore
+
+No sensitive credentials committed
+
+License
+
+This project is licensed under the MIT License and is free to use, modify, and distribute.
+
+Author
+
+Bhavy Thakar
+Career Compass AI
+
+Future Enhancements
+
+Machine learning-based career prediction
+
+Resume parsing using NLP
+
+Advanced recommendation tuning
+
+Cloud deployment
+
+Automated CSV-to-database pipeline
